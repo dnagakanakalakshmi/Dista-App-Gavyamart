@@ -11,7 +11,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', async function () {
     let customerId = '{{ dynamic_customer_id }}';
-    var storeUrl = '{{ shop.url }}';
+    var storeUrl = '{{ shop.permanent_domain }}';
     let sessionId = localStorage.getItem('recentlyViewedSessionId') || '';
     let uid = '{{ uid }}';
 
@@ -78,6 +78,7 @@
             sessionId,
             productId,
             storeUrl,
+            uid,
             token: globalToken,
           }),
         });
